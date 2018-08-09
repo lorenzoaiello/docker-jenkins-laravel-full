@@ -27,7 +27,7 @@ RUN curl -sSO https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 RUN apt-key add nodesource.gpg.key
 RUN echo "deb https://deb.nodesource.com/${NODEREPO} ${DISTRO} main" > /etc/apt/sources.list.d/nodesource.list
 RUN echo "deb-src https://deb.nodesource.com/${NODEREPO} ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list
-RUN apt-get update -q && apt-get install -y 'nodejs=6.11.3*' && npm i -g npm@5
+RUN apt-get update -q && apt-get install -y 'nodejs=6.*' && npm i -g npm@5
 
 # Install pip
 RUN apt-get install -y python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
