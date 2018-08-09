@@ -16,7 +16,7 @@ RUN docker-php-source delete
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 
 RUN apt-get update -q && apt-get install -q -y \
-        curl apt-transport-https apt-utils dialog
+        curl apt-transport-https apt-utils dialog gnupg
 
 WORKDIR /home/download
 ARG NODEREPO="node_6.x"
