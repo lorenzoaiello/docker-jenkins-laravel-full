@@ -31,3 +31,4 @@ RUN apt-get update -q && apt-get install -y 'nodejs=6.*' && npm i -g npm@5
 
 # Install pip
 RUN apt-get install -y python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
+RUN pip --no-cache-dir install --upgrade awscli awsebcli
