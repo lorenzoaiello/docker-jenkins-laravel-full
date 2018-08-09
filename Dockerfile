@@ -16,7 +16,8 @@ RUN docker-php-source delete
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 
 # nvm environment variables
-ENV NVM_DIR /usr/local/nvm
+RUN mkdir ~/.nvm
+ENV NVM_DIR ~/.nvm
 ENV NODE_VERSION 6.10.3
 
 # install nvm
